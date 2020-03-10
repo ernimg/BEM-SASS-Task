@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans|Roboto:400,700&display=swap&subset=latin-ext');
-$main-color: #e0f1ff;
+$main-color: #e6fcee;
 $default-font: 'arial', 'sans-serif';
 $special-font: 'pt sans', 'roboto', 'arial', 'sans-serif';
 *,
@@ -195,5 +195,27 @@ html {
 }
 .footer {
   flex-basis: 100%;
-  background-color: blue;
+  background-color: $main-color;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+  .sm_links {
+    flex-basis: 30%;
+  }
+}
+.sm_links {
+  height: 300px;
+  font-family: $special-font;
+  background-color: darken($main-color, 15%);
+  &__title {
+    margin: 20px 0 40px;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  &__item {
+    text-indent: 40px;
+    font-size: 1.8rem;
+  }
 }
