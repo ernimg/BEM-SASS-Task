@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Roboto:400,700&display=swap&subset=latin-ext');
+$main-color: #8daae5;
+$default-font: 'arial', 'sans-serif';
+$secial-font: 'pt sans', 'roboto', 'arial', 'sans-serif';
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  background-color: $main-color;
+  font-family: $default-font;
+  color: #fff;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: flex-start;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 #000;
+}
+.logo {
+  flex-basis: 200px;
+  &__image {
+    display: block;
+    width: 100%;
+  }
+}
+.search {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__input {
+    flex-basis: 60%;
+    height: 50%;
+    margin-right: 2vh;
+    padding: 0 10px;
+    font-size: 1.4rem;
+    &:focus {
+      box-shadow: 0 0 2px 1px $main-color;
+      font-weight: bold;
+    }
+  }
+  &__button {
+    height: 50%;
+    padding: 0 10px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+.setings {
+  display: flex;
+  padding: 0 30px 0 50px;
+  align-items: center;
+  &__icon-link {
+    margin: 0 5px;
+    font-size: 3rem;
+    color: #666;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+.menu {
+  flex-basis: 100%;
+  height: 70px;
+  margin-top: 10px;
+  padding: 15px 50px 15px 80px;
+  font-family: $secial-font;
+  background-color: darkcyan;
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+  &__item {
+    margin: 0 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 4rem;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      border-bottom: 2px solid #fff;
+      color: #fff;
+    }
+    &:nth-last-child(1) {
+      margin-left: auto;
+      border: 2px solid #fff;
+      &:hover {
+        border-color: #fff;
+      }
+      .menu__link {
+        padding: 0 22px;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+  }
+}
+.main-articles {
+  flex-basis: 100%;
+  background-color: $main-color;
+
+  display: flex;
+  flex-wrap: wrap;
+  &__slogan {
+    flex-basis: 100%;
+  }
+}
+.articles {
+}
+.article-list {
+  flex-basis: 100%;
+  background-color: pink;
+}
+.footer {
+  flex-basis: 100%;
+  background-color: blue;
+}
