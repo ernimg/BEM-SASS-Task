@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans|Roboto:400,700&display=swap&subset=latin-ext');
-$main-color: #8daae5;
+$main-color: #e0f1ff;
 $default-font: 'arial', 'sans-serif';
 $special-font: 'pt sans', 'roboto', 'arial', 'sans-serif';
 *,
@@ -11,7 +11,7 @@ $special-font: 'pt sans', 'roboto', 'arial', 'sans-serif';
 }
 html {
   font-size: 10px;
-  background-color: $main-color;
+  background-color: #ddd;
   font-family: $default-font;
   color: #fff;
 }
@@ -123,6 +123,9 @@ html {
   padding: 30px 50px;
   color: #333;
   text-align: center;
+  &--small {
+    padding: 20px 30px;
+  }
   &__image {
     display: block;
     width: 100%;
@@ -132,6 +135,12 @@ html {
     text-transform: uppercase;
     font-size: 3rem;
     padding: 35px 0 15px;
+    .article--small & {
+      padding: 25px 2px 10px 2px;
+      font-size: 1.8rem;
+      background-color: darkcyan;
+      color: #fff;
+    }
   }
   &__description {
     font-size: 1.6rem;
@@ -176,7 +185,13 @@ html {
 
 .article-list {
   flex-basis: 100%;
-  background-color: pink;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  &__article {
+    flex-basis: 30%;
+    flex-grow: 1;
+  }
 }
 .footer {
   flex-basis: 100%;
